@@ -58,7 +58,6 @@ class App extends React.Component {
       <div>
         <div className="wrapper">
           <div className="main">
-            <div className="container">
               <div className="row">
                 <div className="col-xs-5 title-container">
                   <Titles />
@@ -79,7 +78,6 @@ class App extends React.Component {
                     description={this.state.description}
                     error={this.state.error}
                   />
-                </div>
               </div>
             </div>
           </div>
