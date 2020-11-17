@@ -9,6 +9,12 @@ const API_KEY = "321f1aecaf0a5d6d6f47cb28e6746b69";
 class App extends React.Component {
   state = {
     temperature: undefined,
+    max_temp : undefined,
+    min_temp : undefined,
+    feels_like : undefined,
+    pressure : undefined,
+    wind_speed: undefined,
+    wind_direction:undefined,
     city: undefined,
     country: undefined,
     humidity: undefined,
@@ -24,6 +30,12 @@ class App extends React.Component {
     if (city && country) {
       this.setState({
         temperature: data.main.temp,
+        max_temp : data.main.temp_max,
+        min_temp : data.main.temp_min,
+        feels_like : data.main.feels_like,
+        pressure : data.main.pressure,
+        wind_speed: data.wind.speed,
+        wind_direction: data.wind.deg,
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
@@ -55,6 +67,12 @@ class App extends React.Component {
                   <Form getWeather={this.getWeather} />
                   <Weather 
                     temperature={this.state.temperature} 
+                    max_temp={this.state.max_temp} 
+                    min_temp={this.state.min_temp} 
+                    feels_like ={this.state.feels_like} 
+                    pressure={this.state.pressure} 
+                    wind_speed={this.state.wind_speed} 
+                    wind_direction={this.state.wind_direction} 
                     humidity={this.state.humidity}
                     city={this.state.city}
                     country={this.state.country}
