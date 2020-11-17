@@ -4,6 +4,7 @@
 
 body {
   font-family: "Open Sans", serif;
+  background-color: #2c3e50;
 }
 
 .wrapper {
@@ -20,6 +21,7 @@ body {
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
   width: 80%;
   margin: 0 auto;
+  
 }
 
 .title-container {
@@ -49,8 +51,7 @@ body {
 }
 
 .form-container {
-  background-color: #2c3e50;
-  height: 90vh;
+  height: 50vh;
   padding-top: 100px;
   padding-left: 50px;
 }
@@ -97,7 +98,10 @@ button:active {
 }
 
 .weather__info {
-  width: 60%;
+  display : flex;
+  flex-direction : column;
+  background-color: #2c3e50;
+  padding: 20px;
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 2px;
@@ -107,6 +111,8 @@ button:active {
   color: #f16051;
   border-bottom: solid 2px rgba(255,255,255,0.06);
   padding: 20px 0 20px 0;
+  width:100%;
+  
   font-weight: 400;
 }
 
